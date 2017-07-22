@@ -11,8 +11,8 @@
     require 'google_auth.inc.php';
     $user_info = google_auth( $client_id , $client_secret );
 
-    // At this point user is already authenticated by google...
-    // $user_info contains all relevant information.
+    // At this point user is authenticated by Google...
+    // $user_info contains all relevant uzer information
 
 
 
