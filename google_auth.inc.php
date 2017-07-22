@@ -35,7 +35,7 @@
             if( isset($_GET['code']) && !empty($_GET['code']) )
             {
                 $opts = [
-                    'http'=>[ 'method'=>'POST', 'header'=>'Content-type: application/x-www-form-urlencoded', 'content'=>http_build_query( $params ) ],
+                    'http'=>[ 'timeout'=>30, 'method'=>'POST', 'header'=>'Content-type: application/x-www-form-urlencoded', 'content'=>http_build_query( $params ) ],
                     'ssl'=>[ 'verify_peer' => false, 'verify_peer_name' => false ] ];
 
                 @$tokeninfo = json_decode( file_get_contents( 'https://www.googleapis.com/oauth2/v4/token' , false , stream_context_create( $opts ) ));
@@ -43,7 +43,7 @@
                 if ( !isset( $tokeninfo->access_token ) || strlen( $tokeninfo->access_token ) == 0 )
                     redirect('https://www.google.com/accounts/Logout?continue='. rawurlencode( $auth_url ));
 
-                $opts['http'] = NULL;
+                $opts['http'] = [ 'timeout'=>30 ];
                 @$_SESSION['google_access_token'] = $tokeninfo->access_token;
                 @$_SESSION['google_userinfo'] = json_decode( file_get_contents( 'https://www.googleapis.com/oauth2/v3/userinfo?access_token=' . rawurlencode($tokeninfo->access_token ) , false , stream_context_create( $opts )) );
 
