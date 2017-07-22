@@ -1,11 +1,11 @@
 <?php
 
-    // Simple example of Google authentication for your application
+    // This is a simple example of how to use Google user authentication in your application.
 
     // First you need to get google client_id and client_secret for your app 
     //  - https://console.developers.google.com/apis/credentials
 
-    // Then you need to register all URL(s) of your app entry point as an Authorized redirect URIs:
+    // Then you need to register all URL(s) of your app entry points as an Authorized redirect URIs:
 
     //  if the index.php is in a subdirectory you have to register these 3 URIs:
     //      https://www.example.com/example_dir/index.php
@@ -17,7 +17,7 @@
     //      https://www.example.com/
     //      https://www.example.com
 
-    $client_id = '945696353750-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
+    $client_id = '945796353720-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
     $client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
     require 'google_auth.inc.php';
     $user_info = google_auth( $client_id , $client_secret );
