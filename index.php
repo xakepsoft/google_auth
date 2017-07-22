@@ -1,11 +1,22 @@
 <?php
 
-    require 'google_auth.inc.php';
+    // Simple app example that uses Google authentication
+
+    // Get client_id and client_secret for your Web application here: https://console.developers.google.com/apis/credentials
+    // Please don't forget to register URL of this script as an Authorized redirect URIs
+    //      https://www.example.com/example_project/index.php
+    //      https://www.example.com/example_project/
+    //      https://www.example.com/example_project
 
     $google_client_id = '945696353750-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
     $google_client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
-
+    require 'google_auth.inc.php';
     $user_info = google_auth( $google_client_id , $google_client_secret );
+
+    // At this point user is already authenticated by google...
+    // $user_info contains all relevant information.
+
+
 
     $allowed_users = [ 
           'dummy_user1@gmail.com' , 
