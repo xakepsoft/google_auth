@@ -1,12 +1,10 @@
 <?php
 
-    // Simple app example that uses Google authentication
+    // Simple example of Google authentication for your application
 
     // Get client_id and client_secret for your Web application here: https://console.developers.google.com/apis/credentials
-    // Please don't forget to register URL of this script as an Authorized redirect URIs
+    // Please don't forget to register URL of this script as an Authorized redirect URI
     //      https://www.example.com/example_project/index.php
-    //      https://www.example.com/example_project/
-    //      https://www.example.com/example_project
 
     $google_client_id = '945696353750-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
     $google_client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
