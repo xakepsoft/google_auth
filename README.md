@@ -2,7 +2,7 @@
 
 
 
-Very simple solution for projects requiring mandatory google user authentication.
+Very simple solution for projects requiring google user authentication.
 
 Take a look at self-explanatory example - index.php.
 
