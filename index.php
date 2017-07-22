@@ -12,7 +12,7 @@
     $user_info = google_auth( $client_id , $client_secret );
 
     // At this point user is authenticated by Google...
-    // $user_info contains all relevant uzer information
+    // $user_info contains all relevant user information
 
 
 
