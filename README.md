@@ -4,5 +4,5 @@
 
 Very simple solution for projects requiring mandatory google user authentication.
 
-Take a look at self-explanatory sample script - index.php.
+Take a look at self-explanatory example - index.php.
 
