@@ -6,10 +6,10 @@
     // Please don't forget to register URL of this script as an Authorized redirect URI
     //      https://www.example.com/example_project/index.php
 
-    $google_client_id = '945696353750-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
-    $google_client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
+    $client_id = '945696353750-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
+    $client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
     require 'google_auth.inc.php';
-    $user_info = google_auth( $google_client_id , $google_client_secret );
+    $user_info = google_auth( $client_id , $client_secret );
 
     // At this point user is already authenticated by google...
     // $user_info contains all relevant information.
