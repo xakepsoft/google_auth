@@ -9,7 +9,7 @@
 
         if(session_status() == PHP_SESSION_NONE) session_start();
 
-        $redirect_uri  = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+        $redirect_uri  = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         $params = [ 'redirect_uri'  => $redirect_uri , 'client_id' => $google_client_id , 'scope' => 'email profile' , 'response_type' => 'code' ];
         $auth_url = 'https://accounts.google.com/o/oauth2/v2/auth?' . http_build_query( $params );
