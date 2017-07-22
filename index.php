@@ -2,16 +2,17 @@
 
     // Simple example of Google authentication for your application
 
-    // Get client_id and client_secret for your application - https://console.developers.google.com/apis/credentials
+    // First you need to get google client_id and client_secret for your app 
+    //  - https://console.developers.google.com/apis/credentials
 
-    // Also don't forget to register all URL(s) of this script as an Authorized redirect URIs:
+    // Then you need to register all URL(s) of your app entry point as an Authorized redirect URIs:
 
-    //  if the script is in a subdirectory
+    //  if the index.php is in a subdirectory you have to register these 3 URIs:
     //      https://www.example.com/example_dir/index.php
     //      https://www.example.com/example_dir/
     //      https://www.example.com/example_dir
 
-    //  if the script is in a web root directory
+    //  if the index.php is in a web root directory you have to register these 3 URIs:
     //      https://www.example.com/index.php
     //      https://www.example.com/
     //      https://www.example.com
