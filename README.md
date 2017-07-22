@@ -2,7 +2,7 @@
 
 
 
-Use this tool if your project requires Google user authentication.
+Very simple solution for projects requiring mandatory google user authentication.
 
-index.php is a self explanatory example of how to use it.
+Take a look at self-explanatory sample script - index.php.
 
