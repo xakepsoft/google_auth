@@ -9,7 +9,6 @@
 
         if(session_status() == PHP_SESSION_NONE) session_start();
 
-        //$redirect_uri  = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
         $redirect_uri  = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         $params = [ 'redirect_uri'  => $redirect_uri , 'client_id' => $google_client_id , 'scope' => 'email profile' , 'response_type' => 'code' ];
@@ -20,7 +19,6 @@
             //file_get_contents( 'https://accounts.google.com/o/oauth2/revoke?token=' . rawurlencode( $_SESSION['google_access_token'] ) );
             $_SESSION['google_access_token'] = NULL;
             $_SESSION['google_userinfo'] = NULL;
-            //redirect('https://www.google.com/accounts/Logout?continue='. rawurlencode('https://appengine.google.com/_ah/logout?continue='. rawurlencode( $redirect_uri )));
             redirect('https://www.google.com/accounts/Logout?continue='. rawurlencode( $auth_url ));
         }
 
