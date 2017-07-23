@@ -24,8 +24,7 @@
 
     // At this point user is authenticated by Google...
     // $user_info contains all relevant user information
-
-
+    echo "<br /><pre>User info:" , print_r( $user_info , true ); 
 
     $allowed_users = [ 
           'dummy_user1@gmail.com' , 
@@ -44,9 +43,7 @@
         echo "<font color=red><h2>ACCESS DENIED!</h2></font>\n";
         echo "User: <b>" , $user_info->name ,"</b> has been successfully authenticated by GOOGLE but has not been whitelisted by our app yet...";
     }
-          
-          
-    echo "<br /><pre>User info:" , print_r( $user_info , true ); 
 
 
     echo '<a href="?google_signout=1"><b>GOOGLE Signout</b></a>';
+
