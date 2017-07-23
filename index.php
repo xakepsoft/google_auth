@@ -17,6 +17,7 @@
     //      https://www.example.com/
     //      https://www.example.com
 
+    // Replace with your own client_id and client_secret
     $client_id = '945796353720-eraqu5p2v0cl21que4sfiofhbve3en6i.apps.googleusercontent.com';
     $client_secret = 'YbIhAq8ARhmMteFQDlQrZD0d';
     require 'google_auth.inc.php';
